@@ -1,0 +1,47 @@
+
+body{
+    background: #c6c6cf;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    margin-top:30px;
+    border: 1px solid chocolate;
+    padding:20px;
+    background: #ededed;
+    box-shadow: 2px 3px 16px 1px;
+}
+
+button{
+    background: cadetblue;
+    border: none;
+    height: 40px;
+    transition: 0.4s;
+    width: 110px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: rgb(97, 115, 116);
+    color: antiquewhite;
+
+}
+
+.btns-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+// .nav-container{
+//     list-style: none;
+// }
+
+.nav-container li{
+    float: left;
+    padding:3px;
+}

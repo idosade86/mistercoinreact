@@ -1,0 +1,57 @@
+
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+.contact-header{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px 1px;
+    background: #7a8682;
+    width: 90%;
+}
+
+.user-item{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 20px;
+    width:240px;
+    background: #eff4f4;
+    box-shadow: 0px 0px 6.5px 0.5px;
+    transition: 0.4s;
+}
+
+.user-item:hover{
+    cursor: pointer;
+    padding: 2px;
+    background: beige;
+}
+
+.search-input{
+    font-size: 18px;
+    width: 170px;
+    margin: 0 auto;
+    display: list-item;
+    margin-top: 30px;
+}
+
+.contact-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-back-contact{
+    margin-bottom: 20px;
+}
+
+.user-link{
+    text-decoration: none;
+    color: #4a405c;
+}

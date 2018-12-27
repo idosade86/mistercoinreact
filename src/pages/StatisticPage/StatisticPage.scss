@@ -1,0 +1,14 @@
+
+
+
+.months-container{
+    display:flex;
+}
+
+.months-container li {
+    padding:5px;
+}
+
+.months-container li:hover {
+cursor: pointer;
+}
