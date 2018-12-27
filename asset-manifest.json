@@ -1,13 +1,13 @@
 {
-  "main.css": "/mistercoinreact/static/css/main.2815c79a.chunk.css",
-  "main.js": "/mistercoinreact/static/js/main.d80b6c67.chunk.js",
-  "main.js.map": "/mistercoinreact/static/js/main.d80b6c67.chunk.js.map",
-  "static/js/1.1c0e1206.chunk.js": "/mistercoinreact/static/js/1.1c0e1206.chunk.js",
-  "static/js/1.1c0e1206.chunk.js.map": "/mistercoinreact/static/js/1.1c0e1206.chunk.js.map",
+  "main.css": "/mistercoinreact/static/css/main.3d3514dd.chunk.css",
+  "main.js": "/mistercoinreact/static/js/main.feb68548.chunk.js",
+  "main.js.map": "/mistercoinreact/static/js/main.feb68548.chunk.js.map",
+  "static/js/1.2b44c40c.chunk.js": "/mistercoinreact/static/js/1.2b44c40c.chunk.js",
+  "static/js/1.2b44c40c.chunk.js.map": "/mistercoinreact/static/js/1.2b44c40c.chunk.js.map",
   "runtime~main.js": "/mistercoinreact/static/js/runtime~main.9c10770b.js",
   "runtime~main.js.map": "/mistercoinreact/static/js/runtime~main.9c10770b.js.map",
-  "static/css/main.2815c79a.chunk.css.map": "/mistercoinreact/static/css/main.2815c79a.chunk.css.map",
+  "static/css/main.3d3514dd.chunk.css.map": "/mistercoinreact/static/css/main.3d3514dd.chunk.css.map",
   "index.html": "/mistercoinreact/index.html",
-  "precache-manifest.fabf127a208b0db415e6dbe69e92ba4c.js": "/mistercoinreact/precache-manifest.fabf127a208b0db415e6dbe69e92ba4c.js",
+  "precache-manifest.a637ac7406113c04d8f67136814240b7.js": "/mistercoinreact/precache-manifest.a637ac7406113c04d8f67136814240b7.js",
   "service-worker.js": "/mistercoinreact/service-worker.js"
 }
