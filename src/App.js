@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, NavLink, Switch, Redirect } from 'react-router-dom'
-import ContactService from './services/ContactService.js'
+import { HashRouter as Router, Route, NavLink, Switch, Redirect } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage.js'
 import ContactPage from './pages/ContactPage/ContactPage'
 import StatisticPage from './pages/StatisticPage/StatisticPage'
@@ -13,7 +12,7 @@ import { inject, observer } from 'mobx-react';
 
 
 const PrivateRoute = (props) => {
-  return props.user ? <Route {...props}/> : <Redirect to="/Signup" />
+  return props.user ? <Route {...props} /> : <Redirect to="/Signup" />
 }
 
 
@@ -21,7 +20,7 @@ const PrivateRoute = (props) => {
 @observer
 class App extends Component {
 
-  
+
 
   render() {
     const user = this.props.store.UserStore.logedUser
@@ -42,9 +41,6 @@ class App extends Component {
                 <li>Statistics</li>
               </NavLink>
             </ul>
-
-
-
             <Switch>
               <Route path="/Signup" component={SignupPage} />
               <PrivateRoute path="/Home" user={user} component={HomePage} />
