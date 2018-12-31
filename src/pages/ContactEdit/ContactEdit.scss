@@ -14,8 +14,28 @@ h1{
     text-align: center;
 }
 
-.btn-container{
-    margin: 0 auto;
-    margin-top:20px;
-    justify-content: space-around;
+
+.btn-edit-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top:40px;
+}
+
+.edit-input-item{
+    height: 30px;
+    border-radius: 5px;
+}
+
+.input-title{
+    margin-bottom: 20px;
+}
+
+.img-delete-wraper{
+    display: flex;
+    justify-content: flex-end;
+    margin-top:30px;
+}
+.img-delete-wraper img{ 
+    height: 30px;
+    width: 30px;
 }

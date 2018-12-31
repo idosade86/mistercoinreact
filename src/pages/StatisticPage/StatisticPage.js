@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BitcoinService from '../../services/BitcoinService';
 import './StatisticPage.scss'
 
@@ -31,9 +31,8 @@ export default class StatisticPage extends Component {
         this.getSpan = this.getSpan.bind(this);
     }
 
-    getSpan(ev) {
-        this.componentDidMount(this.input.value)
-        ev.preventDefault()
+    getSpan(num) {
+        this.componentDidMount(num)
     }
 
     render() {
@@ -41,35 +40,22 @@ export default class StatisticPage extends Component {
         const { fetchData } = this.state
         const { slotsToChart } = this.state
         return slotsToChart && (
-            <div>
-                <form action="submit.prevent" onSubmit={this.getSpan}>
-                    <input type="number" ref={(input) => this.input = input} />
-                    {/* <input list="timespan" ref={(input) => this.input= input}/>
-                    <datalist id="timespan">
-                        <option value="Days" />
-                        <option value="Months" />
-                        <option value="Years" />
-                    </datalist> */}
-                    <button>Get rates</button>
-                </form>
-                {/* todo change chart by click months */}
-                <ul className="months-container">
-                    <li>1M</li> |
-                    <li>2M</li> |
-                    <li>6M</li> |
-                    <li>12M</li> |
-                    <li>24M</li>
-                </ul>
-
+            <div className="stat-container">
                 <h1>Statistcs</h1>
+                <ul className="months-container">
+                    <li onClick={(e) => { this.getSpan(1) }}>1M</li> |
+                        <li onClick={(e) => { this.getSpan(2) }}>2M</li> |
+                        <li onClick={(e) => { this.getSpan(6) }}>6M</li> |
+                        <li onClick={(e) => { this.getSpan(12) }}>12M</li> |
+                        <li onClick={(e) => { this.getSpan(24) }}>24M</li>
+
+                </ul>
                 <h2>{fetchData.data.name}</h2>
                 <Sparklines data={slotsToChart}>
                     <SparklinesLine style={{ fill: "none" }} />
                     <SparklinesSpots />
                 </Sparklines>
-                <Link to="/Contact">
-                <button>Bit a friend</button>
-                </Link>
+
             </div>
 
 

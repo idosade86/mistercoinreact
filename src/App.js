@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, NavLink, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink, Switch, Redirect } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage.js'
 import ContactPage from './pages/ContactPage/ContactPage'
 import StatisticPage from './pages/StatisticPage/StatisticPage'
@@ -7,6 +7,9 @@ import ContactDetails from './pages/ContactDetails/ContactDetails'
 import ContactEdit from './pages/ContactEdit/ContactEdit'
 import SignupPage from './pages/LoginPage/LoginPage'
 import './assets/css/App.scss'
+import contactPng from '../src/imgs/contact.png';
+import homePng from '../src/imgs/home.png';
+import chartPng from '../src/imgs/chart.png';
 
 import { inject, observer } from 'mobx-react';
 
@@ -32,22 +35,23 @@ class App extends Component {
           <div className="App">
             <ul className="nav-container">
               <NavLink exact to="/Contact">
-                <li>Bit a friend |</li>
+                <img src={contactPng} />
               </NavLink>
               <NavLink exact to="/Home">
-                <li>My Profie |</li>
+                <img src={homePng} />
               </NavLink>
               <NavLink exact to="/Statistics">
-                <li>Statistics</li>
+                <img src={chartPng} />
               </NavLink>
             </ul>
+            <div class="nav-line-sep"></div>
             <Switch>
               <Route path="/Signup" component={SignupPage} />
-              <PrivateRoute path="/Home" user={user} component={HomePage} />
               <Route path="/Statistics" component={StatisticPage} />
               <PrivateRoute path="/Contact" user={user} exact component={ContactPage} />
               <Route path="/Contact/Edit/:contactId?" component={ContactEdit} />
               <Route path="/Contact/:contactId" component={ContactDetails} />
+              <PrivateRoute path="/" user={user} component={HomePage} />
             </Switch>
 
           </div>

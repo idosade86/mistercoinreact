@@ -20,7 +20,7 @@ class LoginPage extends Component {
     handleLogin = (ev) => {
         ev.preventDefault()
         this.props.store.UserStore.signup(this.state.typedUsername)
-        this.props.history.push('/contact')
+        this.props.history.push('/Contact')
     }
 
     render() {

@@ -11,8 +11,6 @@ img{
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    box-shadow: 1px 1px 1px 1px;
-    background: #7a8682;
     width: 90%;
 }
 
@@ -21,7 +19,7 @@ img{
     justify-content: center;
     margin: 10px;
     border-radius: 20px;
-    width:240px;
+    width:80%;
     background: #eff4f4;
     box-shadow: 0px 0px 6.5px 0.5px;
     transition: 0.4s;
@@ -35,17 +33,29 @@ img{
 
 .search-input{
     font-size: 18px;
-    width: 170px;
     margin: 0 auto;
     display: list-item;
     margin-top: 30px;
+    margin-bottom: 20px;
+    width: 60%;
+    min-width: 200px;
+    max-width: 570px;
+    height: 40px;
+    border-radius: 5px;
+    background: lightgray;
 }
 
 .contact-container{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    height: 300px;
+    overflow-x: auto;
+    min-width: 270px;
+    max-width: 500px;
+    width: 80%;
 }
+
 
 .btn-back-contact{
     margin-bottom: 20px;
@@ -54,4 +64,10 @@ img{
 .user-link{
     text-decoration: none;
     color: #4a405c;
+}
+
+.btn-add-contact {
+    right: 20%;
+    bottom: 100px;
+    position: fixed;
 }

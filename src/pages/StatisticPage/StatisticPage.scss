@@ -3,6 +3,7 @@
 
 .months-container{
     display:flex;
+    justify-content: space-between;
 }
 
 .months-container li {
@@ -11,4 +12,13 @@
 
 .months-container li:hover {
 cursor: pointer;
+}
+
+.stat-container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.App{
+    height: 540px;
 }

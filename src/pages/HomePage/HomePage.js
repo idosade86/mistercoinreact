@@ -32,14 +32,30 @@ class HomePage extends Component {
                             <li>Coins:{logedUser.coins}</li>
                             <li>BTC: {rate}</li>
                         </ul>
-                        <div className="btns-container">
-                            <Link to="/contact">
-                                <button>Money transfer</button>
-                            </Link>
-                            <Link to="/Statistics">
-                                <button>Statistics</button>
-                            </Link>
+
+
+                        <div>
+                            <h2>Your last 3 moves</h2>
+                            <div className="moves-sep"></div>
+                            <div>
+                                <p>To: Dominic Soto</p>
+                                <p>At: 8/12/2018, 11:37 AM</p>
+                                <p>Amount: 3 coins</p>
+                            </div>
+                            <div className="moves-sep"></div>
+                            <div>
+                                <p>To: Glena Santana</p>
+                                <p>At: 6/12/2018, 5:05 PM</p>
+                                <p>Amount: 10 coins</p>
+                            </div>
+                            <div className="moves-sep"></div>
+                            <div>
+                                <p>To: Grce James</p>
+                                <p>At: 3/12/2018, 6:50 PM</p>
+                                <p>Amount: 5 coins</p>
+                            </div>
                         </div>
+                     
                     </header>
                 }
             </div>

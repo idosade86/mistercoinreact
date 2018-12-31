@@ -37,11 +37,16 @@ button:hover{
     justify-content: space-around;
 }
 
-// .nav-container{
-//     list-style: none;
-// }
+.nav-container{
+display: flex;
+justify-content: space-around;
+}
 
 .nav-container li{
     float: left;
     padding:3px;
+}
+
+.nav-line-sep{
+    border-bottom: 1px solid black;
 }

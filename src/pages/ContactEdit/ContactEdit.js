@@ -4,6 +4,9 @@ import ContactService from '../../services/ContactService';
 import './ContactEdit.scss'
 import { inject, observer } from 'mobx-react';
 import { observable } from 'mobx';
+import deleteIcon from '../../imgs/delete.png'
+import backIcon from '../../imgs/back.png'
+import saveIcon from '../../imgs/save.png'
 
 @inject('store')
 @observer
@@ -44,21 +47,24 @@ class ContactEdit extends Component {
         return (
             <section>
                 {contactToEdit && <div class="edit-container">
-                    {contactToEdit.name !== '' && <button onClick={this.handleDelete}>Delete</button>}
+                    {contactToEdit.name !== '' && <div className="img-delete-wraper"> <img onClick={this.handleDelete} src={deleteIcon} /></div>}
                     <h1>{(this.props.match.params.contactId) ? 'Edit user' : 'Add user'}</h1>
                     <form onSubmit={this.handleSubmit} className="edit-container-inputs">
-                        <img src={`https://robohash.org/${contactToEdit.name}.png`}></img>
-                        Name:<input type="text" name="name" placeholder="name" value={contactToEdit.name} onChange={this.handleChange} />
-                        Phone:<input type="text" name="phone" placeholder="Phone" value={contactToEdit.phone} onChange={this.handleChange} />
-                        Email:<input type="text" name="email" placeholder="Email" value={contactToEdit.email} onChange={this.handleChange} />
-                        <div className="btn-container">
-                            <button>Save</button>
+                        {contactToEdit._id && <img src={`https://robohash.org/${contactToEdit.name}.png`}></img>}
+                        <p classNAme="input-title">Name:</p>
+                        <input type="text" className="edit-input-item" name="name" placeholder="name" value={contactToEdit.name} onChange={this.handleChange} />
+                        <p classNAme="input-title">Phone:</p>
+                        <input type="text" className="edit-input-item" name="phone" placeholder="Phone" value={contactToEdit.phone} onChange={this.handleChange} />
+                        <p classNAme="input-title">Email:</p>
+                        <input type="text" className="edit-input-item" name="email" placeholder="Email" value={contactToEdit.email} onChange={this.handleChange} />
+                        <div className="btn-edit-container">
                             {contactToEdit.name !== '' && <Link to={`/contact/${contactToEdit._id}`}>
-                                <button>Back</button>
+                                <img src={backIcon} />
                             </Link>}
                             {contactToEdit.name === '' && <Link to={`/contact`}>
-                                <button>Back</button>
+                                <img src={backIcon} />
                             </Link>}
+                            <img src={saveIcon} />
                         </div>
                     </form>
                 </div>}
